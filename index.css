@@ -55,7 +55,8 @@
 
 
 .light {
-    --primary: #5E4AE3;
+  --prime:#343047;
+  --primary: #5E4AE3;
     --primary-text: #ffffff;
     --secondary-bg: #ffffff;
     --secondary-text: #333333;
@@ -63,6 +64,7 @@
   }
   
   .dark {
+    --prime:#dcd9e7;
     --primary: #333333;
     --primary-text: #ffffff;
     --secondary-bg: #1A1A1A;

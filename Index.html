@@ -13,6 +13,7 @@
       theme: {
         extend: {
           colors: {
+              'prime':'#343047',
             'primary': '#5E4AE3',
             'primary-text': '#ffffff',
             'secondary-bg': '#ffffff',
@@ -31,7 +32,7 @@
 <body class="light">
      <div class="bg-primary text-primary-text min-h-screen">
         
-        <nav class="flex bg-primary justify-between items-center px-10">
+        <!-- <nav class="flex bg-primary justify-between items-center px-10">
           <div class="flex items-center gap-2 text-xl font-bold">
             <div class="w-36 h-36 rounded-full flex items-center justify-center font-bold">
               <img src="images\images\logo\Logo.svg" alt="" />
@@ -58,7 +59,58 @@
               <i id="themeIcon" class='fa-solid fa-moon'></i>
             </button>
           </div>
-        </nav>
+        </nav> -->
+
+        <!-- Nav -->
+<nav class="flex bg-primary justify-between items-center px-10 py-4 relative">
+  <div class="flex items-center gap-2 text-xl font-bold">
+    <div class="w-36 h-36 rounded-full flex items-center justify-center font-bold">
+      <img src="images/images/logo/Logo.svg" alt="" />
+    </div>
+  </div>         
+
+  <!-- Offcanvas Menu -->
+  <div id="mobileMenu" class="fixed top-0 right-[-100%] w-2/3 h-full z-50 p-6 transition-all duration-300 flex flex-col gap-6 font-medium text-primary bg-secondary-bg ">
+    <button onclick="closeMenu()" class="text-primary text-2xl self-end">
+      <i class=" text-primary fa-solid fa-xmark"></i>
+    </button>
+    <ul class="flex flex-col gap-4 justify-center font-bold items-center text-xl  hover:text-prime">
+        <div class="w-36 h-36 rounded-full flex items-center justify-center font-bold">
+      <img src="images/images/logo/logo2.svg" alt="" />
+    </div>
+      <li>Solution</li>
+      <li>Product</li>
+      <li>About</li>
+      <li>Contact</li>
+      <li><button class="border border-secondary-border px-4 py-2 rounded-md">Login</button></li>
+      <li><button class="border border-secondary-border px-4 py-2 rounded-md">Signup</button></li>
+    </ul>
+  </div>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden lg:flex gap-8 font-medium">
+    <li>Solution</li>
+    <li>Product</li>
+    <li>About</li>
+    <li>Contact</li>
+  </ul>
+
+  <!-- Buttons -->
+  <div class="flex gap-4 items-center">
+    <button class="hidden lg:block px-4 py-2 border border-secondary-border rounded-md font-semibold">Login</button>
+    <button class="hidden lg:block px-4 py-2 border border-secondary-border rounded-md font-semibold">Signup</button>
+    
+    <!-- Bar Icon for Mobile -->
+    <button onclick="openMenu()" class="lg:hidden text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Theme Toggle -->
+    <button onclick="toggleTheme()" class="toggle-btn">
+      <i id="themeIcon" class='fa-solid fa-moon'></i>
+    </button>
+  </div>
+</nav>
 
 
         <div class="flex flex-col md:flex-row items-center px-10 py-20">
@@ -457,7 +509,16 @@
       </div>
       <script>
 
-  
+// off canvas on mobile view
+
+  function openMenu() {
+    document.getElementById('mobileMenu').style.left = '0';
+  }
+
+  function closeMenu() {
+    document.getElementById('mobileMenu').style.left = '-100%';
+  }
+
 
 
 $(document).ready(function () {
