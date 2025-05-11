@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single_Page</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  tailwind.config = {
+      darkMode: '.dark', // or '.dark'
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#5E4AE3',
+            'primary-text': '#ffffff',
+            'secondary-bg': '#ffffff',
+            'secondary-text': '#333333',
+            'secondary-border': '#cccccc',
+          }
+        }
+      }
+    }
+    </script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+     <link rel="stylesheet" href="index.css">   
+    
+</head>
+<body class="light">
+     <div class="bg-primary text-primary-text min-h-screen">
+        
+        <nav class="flex bg-primary justify-between items-center px-10">
+          <div class="flex items-center gap-2 text-xl font-bold">
+            <div class="w-36 h-36 rounded-full flex items-center justify-center font-bold">
+              <img src="images\images\logo\Logo.svg" alt="" />
+            </div>
+          </div>
+          <ul class="flex ul gap-8 font-medium">
+            <li>Solution</li>
+            <li>Product</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+          <div class="flex gap-4 ">
+            <button to='/login' class="px-4 ul py-2 border border-secondary-border rounded-md font-semibold">
+              Login
+            </button>
+            <button to='signup' class="px-4 ul py-2 border border-secondary-border rounded-md font-semibold">
+              Signup
+            </button>
+            
+            <button class="bar">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button onClick="toggleTheme()" class="toggle-btn">
+              <i id="themeIcon" class='fa-solid fa-moon'></i>
+            </button>
+          </div>
+        </nav>
+
+
+        <div class="flex flex-col md:flex-row items-center px-10 py-20">
+          <div class="flex-1">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+              SaaS Delivery <br /> Management Software
+            </h1>
+            <p class="mt-4 text-lg text-gray-200">
+              Track and Optimize routes in real-time
+            </p>
+            <div class="mt-6 flex gap-6">
+              <button class=" foot hover:text-primary px-6 py-3 rounded-md font-semibold">
+                Get Started
+              </button>
+              <button class="watch-btn px-6 py-3 text-primary rounded-md font-semibold  flex items-center gap-2">
+                <span class="w-4 h-4 bg-primary  text-primary-text rounded-full flex items-center justify-center">
+                  <i class="fa-solid fa-circle-play"></i>
+                </span>
+                Watch how it works
+              </button>
+            </div>
+          </div>
+
+          <div class="flex-1 flex justify-center mt-10 md:mt-0 relative">
+           
+            <img src="images\images\img\banner-desktop.png" alt="User" />
+          </div>
+        </div>
+
+    
+        <div class="bg-white py-10 px-24 flex justify-center items-center flex-wrap gap-10">
+          <img src="images\images\brands\puuma.jpg" alt="Puma" class="h-24" />
+          <img src="images\images\brands\nykaa.png" alt="Nykaa" class="h-24" />
+          <img src="images\images\brands\1mg1.png" alt="1mg" class="h-20" />
+          <img src="images\images\brands\pharmeasy.png" alt="PharmEasy" class="h-24" />
+          <img src="images\images\brands\bewakoof.png" alt="Bewakoof" class="h-24" />
+        </div>
+
+        <div class="bg-secondary-bg">
+          <div class="text-center py-16 px-4">
+            <h2 class="text-3xl font-bold text-secondary-text mb-4">
+              Solution for every delivery
+            </h2>
+            <div class=" w-16 h-1 bg-primary mx-auto mb-10 rounded-full"></div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        
+                <div  class="foot grocery-card rounded-xl p-6 text-center shadow-sm border  hover:shadow-md transition-all duration-300 border-b-[4px] hover:border-primary bg-secondary-bg">
+                  <img src="images/images/icons/Food.svg" alt="" class="w-12 h-16 mx-auto mb-4" />
+                  <h3 class="text-lg font-semibold text-secondary-text">Food</h3>
+                  <p class="text-gray-500 text-sm mt-2"> Leverage Agile Frameworks Provide a robust synopsis high level overview.</p>
+                </div>
+
+                  <div  class="foot grocery-card rounded-xl p-6 text-center shadow-sm border  hover:shadow-md transition-all duration-300 border-b-[4px] hover:border-primary bg-secondary-bg">
+                  <img src="images/images/icons/Grocery.svg" alt="" class="w-12 h-16 mx-auto mb-4" />
+                  <h3 class="text-lg font-semibold text-secondary-text">Grocery</h3>
+                  <p class="text-gray-500 text-sm mt-2">Bring to the table win-win survival strategies to ensure proactive dominations.</p>
+                </div>
+                  <div  class="foot grocery-card rounded-xl p-6 text-center shadow-sm border  hover:shadow-md transition-all duration-300 border-b-[4px] hover:border-primary bg-secondary-bg">
+                  <img src="images/images/icons/Courier.svg" alt="" class="w-12 h-16 mx-auto mb-4" />
+                  <h3 class="text-lg font-semibold text-secondary-text">Courier</h3>
+                  <p class="text-gray-500 text-sm mt-2">Organically grows the hollis world view of disrupted innovation via workplace.</p>
+                </div>
+                  <div class="foot grocery-card rounded-xl p-6 text-center shadow-sm border  hover:shadow-md transition-all duration-300 border-b-[4px] hover:border-primary bg-secondary-bg"
+                >
+                  <img src="images/images/icons/Logistics.svg" alt="" class="w-12 h-16 mx-auto mb-4" />
+                  <h3 class="text-lg font-semibold text-secondary-text">Logistics</h3>
+                  <p class="text-gray-500 text-sm mt-2">Nanotechnology immers along the information highway will close the loop.</p>
+                </div>
+        
+            </div>
+          </div>
+          
+
+        
+          <div class=" relative bg-[#F4F7FE] py-20 px-4 -skew-y-3">
+            <div class="max-w-4xl mx-auto skew-y-3 text-center">
+              <h2 class="text-2xl font-bold text-primary mb-4">
+                Delivery business interfaces
+              </h2>
+              <div class="w-16 h-1 bg-primary mx-auto mb-10 rounded-full"></div>
+
+              <div class="flex flex-wrap justify-center gap-4">
+                <div class="relative">
+                  <button class="back-btn border border-primary hover:bg-primary hover:text-white text-primary px-6 py-3 rounded-md font-semibold">
+                    Dashboard
+                  </button>
+                </div>
+                <button class="back-btn border border-primary hover:bg-primary hover:text-white text-primary px-6 py-3 rounded-md font-semibold">
+                  Customer App
+                </button>
+                <button class="back-btn border border-primary hover:bg-primary hover:text-white text-primary px-6 py-3 rounded-md font-semibold">
+                  Agent App
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-secondary-bg foot py-16 px-4 text-center">
+          <div class="relative mt-[-50px] z-0">
+            <div class="bg-primary transform -skew-y-3 py-20 text-primary-text">
+              <div class="transform skew-y-3 max-w-6xl mx-auto px-4">
+                <h2 class="text-2xl font-semibold mb-6">
+                  An all-in-one proof for final mile delivery solutions
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  
+                  <div class="flex flex-col items-center text-center">
+                    <img
+                      src="images/images/icons/real-time.svg"
+                      alt="Tracking 1"
+                      class="w-12 h-12 mb-4"
+                    />
+                    <h3 class="text-lg font-bold">Real Time Tracking</h3>
+                    <p class="text-sm mt-2 text-primary-text/80">
+                      By adopting real time delivery tracking software final
+                      mile delivery management has become
+                    </p>
+                  </div>
+                  
+                  <div class="flex flex-col items-center text-center">
+                    <img
+                      src="images/images/icons/delivery.svg"
+                      alt="Tracking 2"
+                      class="w-12 h-12 mb-4"
+                    />
+                    <h3 class="text-lg font-bold">Real Time Tracking</h3>
+                    <p class="text-sm mt-2 text-primary-text/80">
+                      By adopting real time delivery tracking software final
+                      mile delivery management has become
+                    </p>
+                  </div>
+                  
+                  <div class="flex flex-col items-center text-center">
+                    <img
+                      src="images/images/icons/bell.svg"
+                      alt="Tracking 3"
+                      class="w-12 h-12 mb-4"
+                    />
+                    <h3 class="text-lg font-bold">Real Time Tracking</h3>
+                    <p class="text-sm mt-2 text-primary-text/80">
+                      By adopting real time delivery tracking software final
+                      mile delivery management has become
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<div class='bg-secondary-bg foot '>
+        <div class="max-w-3xl bg-secondary-bg mx-auto py-10  px-4">
+          <h2 class="text-center text-secondary-text text-2xl font-bold mb-8">
+            Frequently Asked Question
+          </h2>
+        <div class="bg-secondary-bg shadow-md rounded" id="faq-container">
+  <!-- FAQ Item -->
+  <div class="border-b cursor-pointer px-6 py-4 faq-item">
+    <div class="flex items-start gap-2 faq-question">
+      <img src="images/images/icons/add.svg" alt="icon" class="w-4 h-4 toggle-icon" />
+      <p class="font-semibold text-secondary-text">What is SaaS?</p>
+    </div>
+    <div class="faq-answer mt-2 hidden">
+      <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi consequuntur mollitia eos...</p>
+    </div>
+  </div>
+  <div class="border-b cursor-pointer px-6 py-4 faq-item">
+    <div class="flex items-start gap-2 faq-question">
+      <img src="images/images/icons/add.svg" alt="icon" class="w-4 h-4 toggle-icon" />
+      <p class="font-semibold text-secondary-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, maiores. ?</p>
+    </div>
+    <div class="faq-answer mt-2 hidden">
+      <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi consequuntur mollitia eos...</p>
+    </div>
+  </div>
+  <div class="border-b cursor-pointer px-6 py-4 faq-item">
+    <div class="flex items-start gap-2 faq-question">
+      <img src="images/images/icons/add.svg" alt="icon" class="w-4 h-4 toggle-icon" />
+      <p class="font-semibold text-secondary-text">Lorem ipsum dolor sit amet consectetur.?</p>
+    </div>
+    <div class="faq-answer mt-2 hidden">
+      <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi consequuntur mollitia eos...</p>
+    </div>
+  </div>
+  <div class="border-b cursor-pointer px-6 py-4 faq-item">
+    <div class="flex items-start gap-2 faq-question">
+      <img src="images/images/icons/add.svg" alt="icon" class="w-4 h-4 toggle-icon" />
+      <p class="font-semibold text-secondary-text">Lorem ipsum dolor sit amet, consectetur adipisicing. ?</p>
+    </div>
+    <div class="faq-answer mt-2 hidden">
+      <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi consequuntur mollitia eos...</p>
+    </div>
+  </div>
+  <div class="border-b cursor-pointer px-6 py-4 faq-item">
+    <div class="flex items-start gap-2 faq-question">
+      <img src="images/images/icons/add.svg" alt="icon" class="w-4 h-4 toggle-icon" />
+      <p class="font-semibold text-secondary-text">What is SaaS?</p>
+    </div>
+    <div class="faq-answer mt-2 hidden">
+      <p class="text-sm text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quasi consequuntur mollitia eos...</p>
+    </div>
+  </div>
+
+</div>
+
+        </div>
+
+        <div class="foot max-w-7xl mx-auto bg-secondary-bg px-4 py-16">
+          <div class="grid md:grid-cols-2 items-center gap-10">
+            <img
+              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+              alt="building"
+              class="w-full h-[500px] rounded-lg"
+            />
+
+            <div>
+              <h2 class="text-3xl text-secondary-text font-semibold mb-3">
+                What Make Us Different
+              </h2>
+              <p class="text-gray-600 mb-8">
+                Check out our best services you can possibly orders in building
+                your company and don’t forget to ask via out email or our
+                customer service if you are in interesting in using our services
+              </p>
+
+              <div class="foot shadow-md p-6 rounded-xl grid sm:grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-6xl mx-auto backdrop-blur-md z-10 bg-secondary-bg">
+                
+                <div class="text-center px-4 py-6 hover:shadow-md rounded-lg transition">
+                  <img
+                    src="images/images/icons/Suitcase.svg"
+                    alt="icon"
+                    class="w-10 h-10 mx-auto mb-3"
+                  />
+                  <h4 class="font-semibold text-secondary-text">Experienced</h4>
+                  <p class="text-sm text-gray-500 mt-1 mb-2">
+                    odio velit commodi sunt culpa ipsa qui soluta consequuntur!
+                  </p>
+                  <a
+                    href="#"
+                    class="text-blue-500 text-sm font-medium hover:underline"
+                  >
+                    Learn more
+                  </a>
+                </div>
+
+                
+                <div class="text-center px-4 py-6 hover:shadow-md rounded-lg transition">
+                  <img
+                    src="images/images/icons/competitive-price.svg"
+                    alt="icon"
+                    class="w-10 h-10 mx-auto mb-3"
+                  />
+                  <h4 class="font-semibold text-secondary-text">Experienced</h4>
+                  <p class="text-sm text-gray-500 mt-1 mb-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis,
+                  </p>
+                  <a
+                    href="#"
+                    class="text-blue-500 text-sm font-medium hover:underline"
+                  >
+                    Learn more
+                  </a>
+                </div>
+
+                
+                <div class="text-center px-4 py-6 hover:shadow-md rounded-lg transition">
+                  <img
+                    src="images/images/icons/on-time.svg"
+                    alt="icon"
+                    class="w-10 h-10 mx-auto mb-3"
+                  />
+                  <h4 class="font-semibold text-secondary-text">Experienced</h4>
+                  <p class="text-sm text-gray-500 mt-1 mb-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis,
+                  </p>
+                  <a
+                    href="#"
+                    class="text-blue-500 text-sm font-medium hover:underline"
+                  >
+                    Learn more
+                  </a>
+                </div>
+
+                
+                <div class="text-center px-4 py-6 hover:shadow-md rounded-lg transition">
+                  <img
+                    src="images/images/icons/best-material.svg"
+                    alt="icon"
+                    class="w-10 h-10 mx-auto mb-3"
+                  />
+                  <h4 class="font-semibold text-secondary-text">Experienced</h4>
+                  <p class="text-sm text-gray-500 mt-1 mb-2">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis,
+                  </p>
+                  <a
+                    href="#"
+                    class="text-blue-500 text-sm font-medium hover:underline"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+<div class='bg-primary'>
+        <section class="bg-primary text-secondary-text py-20">
+          <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Advance Fleet Tracking <br /> Solution Tracker
+              </h2>
+              <div class="mt-6 flex gap-6">
+                <button class="hover:bg-white hover:text-indigo-600 px-6 py-3 rounded-md font-semibold">
+                  Get Started
+                </button>
+                <button class="flex items-center gap-2">
+                <span class="w-4 h-4 bg-indigo-600  text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </span>
+                  Watch how it works
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        </div>
+        
+        <footer class=" bg-secondary-bg py-12 justify-center">
+          <div class="max-w-9xl foot grid md:grid-cols-5 px-28 pr-12 text-gray-800">
+            <div class="md:col-span-1  pr-8">
+              <div class="flex items-center gap-2 text-xl font-bold">
+                <div class=" text-white  rounded-full">
+                  <img src="images\images\logo\logo2.svg" alt="" />
+                </div>
+              </div>
+              <p class="text-lg text-gray-600">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Facilis, eius.
+              </p>
+            </div>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:col-span-4 foot-sec">
+  <div class="text-start">
+    <h4 class="font-semibold text-2xl mb-3">Product</h4>
+    <ul class="space-y-2 text-lg text-gray-600">
+      <li>Features</li>
+      <li>API</li>
+      <li>Solutions</li>
+    </ul>
+  </div>
+  <div class="text-start">
+    <h4 class="font-semibold text-2xl mb-3">Company</h4>
+    <ul class="space-y-2 text-lg text-gray-600">
+      <li>About Us</li>
+      <li>Blog</li>
+      <li>Contact Us</li>
+    </ul>
+  </div>
+  <div class="text-start">
+    <h4 class="font-semibold text-2xl mb-3">Support</h4>
+    <ul class="space-y-2 text-lg text-gray-600">
+      <li>Support Center</li>
+      <li>System Status</li>
+      <li>Languages</li>
+    </ul>
+  </div>
+  <div class="text-start">
+    <h4 class="font-semibold text-2xl mb-3">Follow Us</h4>
+    <div class="flex space-x-3">
+      <a class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-200"
+         href="https://www.facebook.com/networsystechnologies/">
+        <img src="images/images/social-icons/Facebook.svg" alt="" />
+      </a>
+      <a class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-200"
+         href="https://www.instagram.com/networsyst/">
+        <img src="images/images/social-icons/Twitter.svg" alt="" />
+      </a>
+      <a class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 hover:bg-indigo-200"
+         href="#">
+        <img src="images/images/social-icons/Instagram.svg" alt="#" />
+      </a>
+    </div>
+  </div>
+</section>
+
+          </div>
+        </footer>
+  
+      </div>
+      <script>
+
+  
+
+
+$(document).ready(function () {
+  $('.faq-question').click(function () {
+    const answer = $(this).next('.faq-answer');
+    const icon = $(this).find('.toggle-icon');
+
+    // Toggle the visibility of the answer
+    answer.slideToggle(200, function() {
+      // Change the icon after the animation
+      const isVisible = answer.is(':visible');
+      icon.attr('src', isVisible 
+        ? 'images/images/icons/sub.svg' // Icon for open state
+        : 'images/images/icons/add.svg'); // Icon for closed state
+    });
+  });
+});
+
+
+  //toggle theme
+    function toggleTheme() {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+
+    const icon = document.getElementById('themeIcon');
+    if (document.body.classList.contains('dark')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    }
+  }
+</script>
+
+
+</body>
+</html>
