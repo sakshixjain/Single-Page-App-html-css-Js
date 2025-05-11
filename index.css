@@ -149,3 +149,7 @@
   .foot ul li {
     color: var(--secondary-text);
   }
+
+  .off-canva li:hover{
+    color: var(--prime);
+  }
