@@ -8,9 +8,10 @@ A modern, responsive single-page website designed for a SaaS-based delivery mana
 
 ## 📸 Screenshots
 
-![Banner Section](images/images/ss3.jpg)
-![Off-canvas light-mode](images/images/ss2.jpg)
-![off-cavas dark-mode](images/images/ss1.jpg)
+<img src="images/images/ss3.jpg" alt="Logo" width="150"/>
+
+<img src="images/images/ss2.jpg" alt="Logo" width="150"/>
+<img src="images/images/ss1.jpg" alt="Logo" width="150"/>
  
 ## 🚀 Features
 
