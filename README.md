@@ -8,12 +8,15 @@ A modern, responsive single-page website designed for a SaaS-based delivery mana
 
 ## 📸 Screenshots
 
-![Banner Section](images/images/img/banner-desktop.png)
-
+![Banner Section](images/images/ss3.jpg)
+![Off-canvas light-mode](images/images/ss2.jpg)
+![off-cavas dark-mode](images/images/ss1.jpg)
+ 
 ## 🚀 Features
 
 - Responsive layout using Tailwind CSS
 - Light/Dark theme toggle
+- Off Canvas for Mobile view
 - Navigation bar with login/signup buttons
 - Hero section with CTA
 - Trusted brand logos
